@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .nav-link:hover {
+            background: #d6850b;
+            transition: .5s;
+            transform: scale(1.1);
+        }
+        
+        .navlink {
+            gap: 5px;
+            border-radius: 5px 5px;
+        }
+        
+        .header {
+            background: black;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            background-color: #212020;
+            z-index: 1000;
+        }
+        
+        .navbar .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        
+        a {
+            color: #fff;
+        }
+        
+        .navbar .nav-menu .nav-link {
+            padding: 10px 18x;
+            color: white;
+            font-size: medium;
+            border-radius: 0.5px;
+            transition: 0.3s ease;
+        }
+        
+        .nav-logo .nav-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #4d260b;
+            color: #fff;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .paragraph {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .shop-button {
+            font-size: 1.2rem;
+            padding: 15px 25px;
+            border-radius: 5px;
+            background-color: #ffba08;
+            color: #6f4e37;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .shop-button:hover {
+            background-color: #ff9f1a;
+        }
+        
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .product-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .product-card {
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .product-card h3 {
+            font-size: 1.2rem;
+            color: #6f4e37;
+            margin-bottom: 10px;
+        }
+        
+        .product-card p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .add-to-cart {
+            padding: 8px 16px;
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #563c29;
+        }
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer .socials {
+            margin-top: 10px;
+        }
+        
+        .social-link {
+            color: #ffba08;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: #ff9f1a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+
+        <nav class="navbar">
+            <h1 class="nav-logo">☕cofee</h1>
+            <ul class="nav-menu">
+                <li class="nav-link">
+                    <a href="#">HOME</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">ABOUT</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">SERVICES</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="paragraph">
+            <h1>Welcome to Our Coffee Shop ☕</h1>
+            <p>Discover the finest coffee blends</p>
+            <button class="shop-button">Shop Now</button>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/cup-cappuccino-with-heart-shape-latte-art-closeup-social-media-post-size_795881-27083.avif" alt="Coffee Beans">
+                <h3>Premium Coffee Beans</h3>
+                <p>$15.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/images.jpg" alt="Espresso Blend">
+                <h3>Espresso Blend</h3>
+                <p>$12.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/images (1).jpg" alt="Latte Mug">
+                <h3>Latte Mug</h3>
+                <p>$8.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/ice cofee.jpg" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>$10.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Shop</p>
+        <div class="socials">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+</body>
+
+</html>
